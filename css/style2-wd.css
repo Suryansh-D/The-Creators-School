@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --primary-color: #d2ff31;
+    --secondary-color: #2a2a2a;
+    --text-color: #ffffff;
+    --background-color: #121212;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.header {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    padding: 20px 5%;
+    background: rgba(42, 42, 42, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-radius: 100px;
+}
+
+.logo {
+    color: var(--primary-color);
+    font-size: 24px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.navbar a {
+    color: var(--text-color);
+    font-size: 18px;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: var(--primary-color);
+}
+
+.join-btn {
+    background-color: var(--primary-color);
+    font-weight: 700;
+    color: black;
+    height: 50px;
+    width: 150px;
+    border-radius: 50px;
+    transition: 0.3s;
+    margin-left: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.join-btn a{
+    text-decoration: none;
+    color: black;
+}
+.join-btn a:hover{
+    color: var(--primary-color);
+}
+.join-btn:hover {
+    background-color: black;
+    color: var(--primary-color);
+}
+
+.course-detail {
+    padding: 100px 10%;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.course-detail h1 {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.course-detail h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-top: 40px;
+}
+
+.course-detail p, .course-detail ul {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.course-detail ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.course-image {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.course-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.buy-now-btn {
+    background-color: var(--primary-color);
+    color: black;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    align-self: flex-start;
+}
+
+.buy-now-btn:hover {
+    background-color: #e9de06;
+}
+.buy-now-btn a{
+    text-decoration: none;
+    color: black;
+}
+.faqs {
+    padding: 100px 10%;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.faqs h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+.faq-question {
+    background-color: var(--primary-color);
+    color: black;
+    border: none;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.faq-question:hover {
+    background-color: #e9de06;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    font-size: 1rem;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border-radius: 0 0 5px 5px;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+footer {
+    background-color: var(--primary-color);
+    padding: 20px 0;
+    text-shadow: #000;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content a {
+    color: black;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-content a:hover {
+    color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        padding: 15px 5%;
+    }
+
+    .navbar {
+        margin-top: 15px;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+    }
+
+    .course-detail {
+        padding: 50px 5%;
+    }
+
+    .course-detail h1 {
+        font-size: 2.5rem;
+    }
+
+    .course-detail h2 {
+        font-size: 2rem;
+    }
+
+    .course-image img {
+        width: 100%;
+    }
+
+    .faqs {
+        padding: 50px 5%;
+    }
+
+    .faq-question {
+        font-size: 1rem;
+    }
+
+    .faq-answer {
+        font-size: 0.9rem;
+    }
+}

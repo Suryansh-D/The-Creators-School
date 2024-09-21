@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Page</title>
+</head>
+<body>
+    <h1>Testing JavaScript Closure</h1>
+    <button class="btn">Button 1</button>
+    <button class="btn">Button 2</button>
+    <button class="btn">Button 3</button>
+
+    <script>
+        var add_the_handler = function (nodes) {
+            var i;
+            for (i = 0; i < nodes.length; i++) {
+                nodes[i].addEventListener('click', function (i) {
+                    return function() {
+                        alert(i);
+                    }
+                }(i));
+            }
+        }
+
+        var buttons = document.querySelectorAll('.btn');
+        add_the_handler(buttons);
+    </script>
+</body>
+</html>
